@@ -3,11 +3,9 @@ function getResult(a,b,c){
     let x = [];
     let diskrim = Math.pow(b,2) - 4 * a * c;
 
-    if (diskrim < 0) {
-        x = x; //сделано для прохождения теста. было x.push("Нет действительных корней"), что не является пустым массивом
-    }else if (diskrim == 0) {
+    if (diskrim == 0) {
         x.push(-b / (2  * a));
-    }else {
+    }else if (diskrim > 0){
         x.push((-b + Math.sqrt(diskrim)) / (2 * a));
         x.push((-b - Math.sqrt(diskrim)) / (2 * a));
     }
