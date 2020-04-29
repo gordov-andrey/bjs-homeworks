@@ -16,19 +16,18 @@ function getResult(a,b,c){
 function getAverageMark(marks) {
     let averageMark;
     if (marks.length == 0) {
-        averageMark = 0;
-    }else {
-        if (marks.length > 5) {
-        console.log("Внимание, содержится более 500 оценок. К зачету идут первые 5");
-        marks.splice(5);
-        }
-      let sum = 0;
-      for (let i = 0; i < marks.length; i++){
-        sum += marks[i];
-      }
-        averageMark = sum / marks.length;
+      return 0;
     }
-
+    if (marks.length > 5) {
+      console.log("Внимание, содержится более 500 оценок. К зачету идут первые 5");
+      marks.splice(5);
+    }
+    let sum = 0;
+    for (let i = 0; i < marks.length; i++){
+      sum += marks[i];
+    }
+    averageMark = sum / marks.length;
+   
     return averageMark;
 }
 
