@@ -24,6 +24,6 @@ describe('Домашнее задание к занятию 2.2 «Прототи
   });
 
   it('Задача №3 должна возвращать ложь для молодого пользователя', () => {
-    expect(checkBirthday([])).toBeFalsy();
+    expect(checkBirthday(new Date())).toBeFalsy();
   });
 });
