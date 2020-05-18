@@ -108,45 +108,54 @@ console.log(arm.durability); // Infinity
 console.log(arm.isBroken()); // false
 
 //HT.2
-class Arm {
+class Arm extends Weapon{
     constructor(){
-      this.name = "Рука";
-      this.attack = 1;
-      this.durability = Infinity;
-      this.range = 1;
-    }
-
-}
-class Bow {
-    constructor(){
-      this.name = "Лук";
-      this.attack = 10;
-      this.durability = 200;
-      this.range = 3;
+        super({
+          name : "Рука",
+          attack : 1,
+          durability : Infinity,
+          range : 1,
+        });
     }
 }
-class Sword {
+class Bow extends Weapon{
     constructor(){
-      this.name = "Меч";
-      this.attack = 25;
-      this.durability = 500;
-      this.range = 1;
+        super({
+          name : "Лук",
+          attack : 10,
+          durability : 200,
+          range : 3,
+        });
     }
 }
-class Knife {
+class Sword extends Weapon{
     constructor(){
-      this.name = "Нож";
-      this.attack = 5;
-      this.durability = 300;
-      this.range = 1;
+        super({
+          name : "Меч",
+          attack : 25,
+          durability : 500,
+          range : 1,
+        });
     }
 }
-class Staff {
+class Knife extends Weapon{
     constructor(){
-      this.name = "Посох";
-      this.attack = 8;
-      this.durability = 300;
-      this.range = 2;
+        super({
+          name : "Нож",
+          attack : 5,
+          durability : 300,
+          range : 1,
+        });
+    }
+}
+class Staff extends Weapon{
+    constructor(){
+        super({
+          name : "Посох",
+          attack : 8,
+          durability : 300,
+          range : 2,
+        });
     }
 }
 class LongBow extends Bow {
@@ -173,6 +182,8 @@ class StormStaff extends Staff{
       this.range = 3;
     }
 }
+
+console.log(Bow.durability);
 
 //HT.3
 class StudentLog{
