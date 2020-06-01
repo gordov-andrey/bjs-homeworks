@@ -44,13 +44,13 @@ function testCase (testFunction, timer) {
 	const testArray = [ [1,2,3], [1,2], [1,2,3], [1,2], [9,5,2,4] ];
 	console.time(timer);
 	for (let i = 0; i < 10; i++){
-		testArray.forEach((testArray) => testFunction(...testArray));
+		testArray.forEach(testArray => testFunction(...testArray));
 	}
 	console.timeEnd(timer);
 }
 
-const mSum = memorize(sum, 5);
+const mSum = memorize(sum, 15);
 
-testCase(sum,'Проверка функции sum');
+testCase(sum,'Проверка sum');
 
-testCase(mSum,'Проверка оптимизированной версии');
+testCase(mSum,'Проверка mSum');
