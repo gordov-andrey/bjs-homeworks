@@ -3,7 +3,7 @@ function sleep(milliseconds) {
   while (new Date().getTime() <= e) {}
 }
 
-function sum(args) {
+function sum(...args) {
     sleep(1000); 
     return args.reduce((sum, arg) => {
       return sum += +arg;
@@ -49,7 +49,7 @@ function testCase (testFunction, timer) {
 	console.timeEnd(timer);
 }
 
-const mSum = memorize(sum, 15);
+const mSum = memorize(sum, 5);
 
 testCase(sum,'Проверка sum');
 
